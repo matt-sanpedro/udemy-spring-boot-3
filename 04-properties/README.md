@@ -24,3 +24,15 @@ java -jar target/myapp.jar
 - devtools
 - testing
 
+# INVERSION OF CONTROL (IOC)
+def: the approach of outsourcing the construction and management of objects
+the spring container is an object factory for:
+	> primary functions 
+		- create and manage objects (inversion of control)
+		- inject object dependencies (dependency injection)
+configuring spring container:
+	1) legacy - XML configuration file
+	2) modern - Java annotations
+	3) modern - Java source code
+
+
