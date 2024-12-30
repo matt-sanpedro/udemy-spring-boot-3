@@ -35,4 +35,30 @@ configuring spring container:
 	2) modern - Java annotations
 	3) modern - Java source code
 
+# DEPENDENCY INJECTION
+def: a principle, client delegates to another object the responsibility of providing its dependencies
 
+# Java Injection Types
+- constructor injection
+	> required dependencies
+	> recommended by spring.io dev team
+- setter injection
+	> optional dependencies
+	> if dependency not provided, app can provide reasonable default logic
+
+# Spring AutoWiring
+- used for dependency injection
+	> Spring queries for class that matches by type: class or interface
+	> automatically injects it, hence autowired - ex. Spring scans for @Components if "Coach" interface exists
+
+# Constructor Injection 
+bean: an instance of a class managed by the Spring container
+- Development Process
+	1) define dependency interface and class (annotate @Component)
+		- marks the class as a Spring Bean
+		- makes bean available for dependency injection
+	2) create demo REST controller
+	3) create constructor in your class for injections
+		- @Autowired annotation tells Spring to inject a dependency
+		- if you have only one constructor the @Autowired on constructor is optional
+	4) add @GetMapping for /dailyworkout
