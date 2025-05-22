@@ -1,0 +1,10 @@
+# TO RUN WITH MAVEN INCLUDED #
+./mvnw package
+./mvnw spring-boot:run
+
+# TO RUN WITH MAVEN WITH LOCAL LINUX INSTALL #
+mvn package
+mvn spring-boot:run
+
+# TO RUN WITH JAVA #
+java -jar target/mycoolapp-0.0.1-SNAPSHOT.jar
