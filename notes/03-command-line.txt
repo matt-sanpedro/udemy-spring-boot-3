@@ -3,6 +3,7 @@
 ./mvnw spring-boot:run
 
 # TO RUN WITH MAVEN WITH LOCAL LINUX INSTALL #
+# NOTE: must use maven in order to enable sping boot devtools (for auto rerun when code changes)
 mvn package
 mvn spring-boot:run
 
