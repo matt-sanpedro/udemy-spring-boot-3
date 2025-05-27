@@ -22,6 +22,7 @@ When to use:
         1. Constructor Injection 
 		- for required dependencies
 		- generally recommended by spring.io development team as first choice
+		- if you only have one constructor, then @Autowired on constructor is optional
         2. Setter Injection 
 		- for optional dependencies
 		- app can provide default logic if dependency is not provided
@@ -31,4 +32,13 @@ Spring AutoWiring
 	- inject it automatically, hence "AutoWired"
 	- Spring will scan for @Components
 
+# DEVELOPMENT PROCESS - CONSTRUCTOR INJECTION #
+	1. Define the dependency interface and class
+	2. Create Demo REST Controller
+	3. Create a constructor in your class for injections
+	4. Add @GetMapping for /dailyworkout
 
+Spring Bean: a regular Java class that is managed by Spring
+
+The @Component annotation marks the class as a Spring Bean
+	- makes the bean available for injection
