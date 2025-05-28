@@ -26,6 +26,7 @@ When to use:
         2. Setter Injection 
 		- for optional dependencies
 		- app can provide default logic if dependency is not provided
+		- inject dependencies by calling setter method(s) on your class
 
 Spring AutoWiring
 	- will look for class that matches by type: class or interface
@@ -42,3 +43,8 @@ Spring Bean: a regular Java class that is managed by Spring
 
 The @Component annotation marks the class as a Spring Bean
 	- makes the bean available for injection
+
+# DEVELOPMENT PROCESS - SETTER INJECTION #
+	1. Create setter method(s) in your class for injections
+	2. Configure the dependency injection with @Autowired Annotation
+
