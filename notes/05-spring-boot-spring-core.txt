@@ -27,6 +27,14 @@ When to use:
 		- for optional dependencies
 		- app can provide default logic if dependency is not provided
 		- inject dependencies by calling setter method(s) on your class
+	3. Field Injection
+		- not recommended by the spring.io development team
+		- was popular but now fallen out of favor
+		- in general, makes code harder to unit test
+		- still used on legacy projects and old blog posts
+		- HOW TO: inject dependencies by setting field values on your class directly
+		- can set values even on private fields
+		- accomplished by Java Reflection
 
 Spring AutoWiring
 	- will look for class that matches by type: class or interface
