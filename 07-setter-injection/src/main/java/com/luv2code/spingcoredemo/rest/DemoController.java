@@ -15,7 +15,10 @@ public class DemoController {
      */
     private Coach myCoach;
 
-    // create the setter method
+    /*
+     * create the setter method
+     * can rename the method because of the @Autowired annotation
+     */
     @Autowired
     public void setCoach(Coach theCoach) {
         myCoach = theCoach;
