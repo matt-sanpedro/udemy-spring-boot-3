@@ -1,0 +1,5 @@
+# MULTIPLE CLASS IMPLEMENTATIONS #
+- can use @Qualifier annotation in the controller to specify which bean
+- if considering both @Primary and @Qualifier, @Qualifier has the priority
+- recommended to use @Qualifier since it is more specific and has higher priority
+
