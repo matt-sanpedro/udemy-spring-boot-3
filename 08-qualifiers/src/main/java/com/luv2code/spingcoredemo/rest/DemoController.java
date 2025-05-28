@@ -20,7 +20,7 @@ public class DemoController {
      * can rename the method because of the @Autowired annotation
      */
     @Autowired
-    public void setCoach(Coach theCoach) {
+    public DemoController(Coach theCoach) {
         myCoach = theCoach;
     }
 
