@@ -16,6 +16,7 @@ public class DemoController {
     private Coach myCoach;
 
     // create the setter method
+    @Autowired
     public void setCoach(Coach theCoach) {
         myCoach = theCoach;
     }
