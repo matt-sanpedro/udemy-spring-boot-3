@@ -9,7 +9,6 @@ import org.springframework.stereotype.Component;
 @Component
 public class CricketCoach implements Coach {
 
-    // the @Override annotation indicates that this method overrides a method in the interface
     /*
      * the @Override annotation indicates that this method overrides a method in the interface
      * "Overriding" in Java occurs when a subclass or child class implements a method already defined in the superclass or base class
