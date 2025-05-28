@@ -10,6 +10,17 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
  * 3. additional configuration [@Configuration]
  */
 @SpringBootApplication
+(
+	scanBasePackages = {"com.luv2code.spingcoredemo", // by default, will only scan this package
+						"com.luv2code.util"}) // explicitly list packages to scan
+/*
+ * The @SpringBootApplication annotation is a convenience annotation that combines:
+ * 1. @Configuration: Indicates that the class can be used by the Spring IoC container as a source of bean definitions.
+ * 2. @EnableAutoConfiguration: Enables Spring Boot's auto-configuration feature.
+ * 3. @ComponentScan: Enables component scanning, allowing Spring to find and register beans in the specified package and its sub-packages.
+ * 
+ * To scan other packages not in the same package as the main class, must explicitly list them
+ */
 public class SpingcoredemoApplication {
 
 	/*

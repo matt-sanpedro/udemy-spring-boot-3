@@ -1,4 +1,4 @@
-package com.luv2code.spingcoredemo.common;
+package com.luv2code.util;
 
 // define dependency interface
 public interface Coach {
