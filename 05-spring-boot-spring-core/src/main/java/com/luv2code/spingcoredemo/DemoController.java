@@ -13,6 +13,13 @@ public class DemoController {
     private Coach myCoach;
 
     // define a constructor for dependency injection
+    /*
+     * define a constructor for dependency injection
+     * "theCoach" is:
+     *     1. injected into the DemoController class
+     *     2. used to initialize the myCoach field
+     *     3. a dependency or "helper" for the controller
+     */
     @Autowired
     public DemoController(Coach theCoach) {
         myCoach = theCoach;
