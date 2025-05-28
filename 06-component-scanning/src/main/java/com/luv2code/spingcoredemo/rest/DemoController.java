@@ -1,7 +1,10 @@
-package com.luv2code.spingcoredemo;
+package com.luv2code.spingcoredemo.rest;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.RestController;
+
+import com.luv2code.spingcoredemo.common.Coach;
+
 import org.springframework.web.bind.annotation.GetMapping;
 
 @RestController
