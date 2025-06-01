@@ -1,0 +1,23 @@
+# INITIALIZATION #
+- by default, when app starts all bean are initialized (@Component, etc.)
+- Spring creates an instance of each
+
+# LAZY INITIALIZATION #
+- instead of creating all beans up front, only initialized when:
+	1. needed for dependency injection
+	2. explicitly requested
+- implemented by adding the @Lazy annotation to a given class
+- can set a global configuration instead of tedious work:
+	spring.main.lazy-initialization=true
+	-> all beans are lazy (no beans created until needed)
+	-> includes the DemoController
+
+ADVANTAGES:
+- only create objects as needed
+- helps with faster startup time if there are large number of components
+
+DISADVANTAGES: 
+- web related components not created until requested (@RestController)
+- may not discover configuration issues until too late
+- need enough memory for all beans once created
+
