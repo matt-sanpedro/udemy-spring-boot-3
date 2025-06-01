@@ -21,7 +21,7 @@ public class DemoController {
      * can rename the method because of the @Autowired annotation
      */
     @Autowired
-    public DemoController(@Qualifier("basketballCoach") Coach theCoach) {
+    public DemoController(@Qualifier("tennisCoach") Coach theCoach) {
         System.out.println("In constructor: " + getClass().getSimpleName());
         myCoach = theCoach;
     }
