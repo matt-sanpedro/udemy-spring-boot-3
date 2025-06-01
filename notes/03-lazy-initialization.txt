@@ -21,3 +21,7 @@ DISADVANTAGES:
 - may not discover configuration issues until too late
 - need enough memory for all beans once created
 
+# CODING #
+- when app initializes, first the coach implementation gets an instance created
+- then, create the DemoController instance and inject the coach implementation (TennisCoach)
+
