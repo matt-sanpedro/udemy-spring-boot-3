@@ -1,0 +1,17 @@
+# BEAN SCOPES #
+Scope: refers to the lifecycle of a bean
+- how long deos bean live?
+- how many instances are created?
+- how is the bean shared?
+- DEFAULT scope is singleton
+
+Singleton: Spring Container creates only one instance of the bean
+- bean instance is cached in memory
+- all dependency injections for the bean will reference SAME bean
+
+# ADDITIONAL SPRING BEAN SCOPES #
+Prototype: creates new bean instance for each container request
+Request: [only for web apps] scoped to HTTP web request
+Session: [only for web apps] scoped to HTTP web session
+Application: [only for web apps] scoped to ServletContext
+Websocket: [only for web apps] scoper to a web socket
