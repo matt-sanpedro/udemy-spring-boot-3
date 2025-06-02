@@ -1,6 +1,6 @@
 # BEAN SCOPES #
 Scope: refers to the lifecycle of a bean
-- how long deos bean live?
+- how long does bean live?
 - how many instances are created?
 - how is the bean shared?
 - DEFAULT scope is singleton
