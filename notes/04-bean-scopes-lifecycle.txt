@@ -33,3 +33,8 @@ Development Process:
 	1. define methods for init and destroy
 	2. add annotations: @PostConstruct and @PreDestroy
 
+# PROTOTYPE SCOPE #
+- Spring does not call the destroy method
+- Spring does not manage the complete lifecycle of a prototype bean
+- client code must clean up prototype-scoped objects and release resources
+
