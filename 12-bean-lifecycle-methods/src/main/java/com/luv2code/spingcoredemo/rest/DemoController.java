@@ -7,7 +7,6 @@ import org.springframework.web.bind.annotation.RestController;
 import com.luv2code.spingcoredemo.common.Coach;
 
 import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.RequestParam;
 
 
 @RestController
@@ -26,8 +25,9 @@ public class DemoController {
     public DemoController(@Qualifier("tennisCoach") Coach theCoach) {
         System.out.println("In constructor: " + getClass().getSimpleName());
         myCoach = theCoach;
+    }
 
-    @GetMapping("/dailyworkout")
+    @GetMapping("/dailyworkout") 
     public String getDailyWorkout() {
         return myCoach.getDailyWorkout();
     }    
