@@ -15,3 +15,21 @@ Request: [only for web apps] scoped to HTTP web request
 Session: [only for web apps] scoped to HTTP web session
 Application: [only for web apps] scoped to ServletContext
 Websocket: [only for web apps] scoper to a web socket
+
+# BEAN LIFECYCLE METHODS #
+Lifecycle Overview:
+container started -> bean instantiated -> dependency injected 
+	-> internal spring processing -> custom init method
+	=> bean ready for use -> container shutdown 
+	-> custom destroy method -> STOP 
+
+Methods and hooks: 
+- can add custom code during BEAN INITIALIZATION
+- calling custom business logic methods
+- setting up handles to resources (db, sockets, file, etc.)
+- can add custom code during BEAN DESTRUCTION
+
+Development Process:
+	1. define methods for init and destroy
+	2. add annotations: @PostConstruct and @PreDestroy
+
