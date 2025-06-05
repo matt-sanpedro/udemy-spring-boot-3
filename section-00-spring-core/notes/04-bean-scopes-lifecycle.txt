@@ -38,3 +38,20 @@ Development Process:
 - Spring does not manage the complete lifecycle of a prototype bean
 - client code must clean up prototype-scoped objects and release resources
 
+# JAVA CONFIG BEAN #
+GOAL: implement a new coach but with NO special annotations
+
+Development Process:
+	1. create a @Configuration class
+	2. define @Bean method and return it to configure the bean
+		- the bean id defaults to the method name
+	3. inject the bean into our controller
+		- inject the bean using the bean id
+
+Use case:
+- make existing third-party class available to Spring framework
+- no access to source code of third-party class
+- use third-party class as a Spring bean
+- real world example: use AWS S3 client as a Spring bean in app
+
+
