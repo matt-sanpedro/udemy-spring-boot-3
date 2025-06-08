@@ -1,0 +1,29 @@
+# HIBERNATE #
+Definition: A framework for persisting / saving Java objects in a database
+- handles all low-level SQL
+- minimizes amount of JDBC code
+- provides Object-to-Relational Mapping (ORM)
+- developer defines mapping between Java class and database table
+
+# JPA #
+Definition: Jakarta (previously Java) Persistence API (JPA)
+
+Only a specification:
+	- standard API for Object-to-Relational Mapping (ORM)
+	- defines set of interfaces
+	- requires implementation to be usable
+
+Benefits of JPA
+	- not locked into vendor's implementation since it is a standard API
+	- portable, flexible code by coding to JPA spec (interfaces)
+	- theoretically can switch vendor implemenations without lock in
+
+CRUD
+C - create objects
+R - read objects
+U - update objects
+D - delete objects
+
+# HOW DOES HIBERNATE / JPA RELATE TO JDBC #
+- both use JDBC for all database communication
+
