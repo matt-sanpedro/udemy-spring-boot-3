@@ -1,0 +1,30 @@
+# MYSQL DATABASE #
+Includes two components:
+	1. MySQL Database Server
+	2. MySQL Workbench
+
+# Install MySQL Server for Ubuntu / Linux OS #
+Update OS with command:
+sudo apt-get update -y
+
+Install MySQL Server:
+sudo apt install mysql-server
+
+Check the server status:
+sudo service mysql status
+
+Check the network status:
+sudo ss -tap | grep mysql
+
+If server is not running correctly, can restart with:
+sudo service mysql restart
+
+For troubleshooting problems with systemd journal:
+sudo journalctl -u mysql
+
+# Install MySQL Workbench for Ubuntu / Linux OS #
+Update OS with command:
+sudo apt-get update -y 
+
+Install the workbench with command:
+sudo apt install mysql-workbench
