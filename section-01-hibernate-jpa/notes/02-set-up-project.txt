@@ -1,0 +1,18 @@
+# AUTOMATIC DATA SOURCE CONFIGURATION #
+- Hibernate is the default implementation on JPA
+- EntityManager is main component for creating queries etc.
+- EntityManager is from Jakarta Persistence API (JPA)
+- Based on configs, beans will get created: DataSource, EntityManager, etc.
+	-> Spring Boot can inject these beans into app, for example the DAO
+- Automatically configure data source
+- Read database connection info from application.properties file
+- No need to provide JDBC driver class name, automatically detected from URL
+
+Add dependencies:
+- MySQL (JDBC) Driver: mysql-connector-j
+- Spring Data (ORM) JPA: spring-boot-starter-data-jpa
+
+# GOAL: CREATE SPRING BOOT COMMAND LINE APP #
+- Focus on Hibernate / JPA
+- Later in the course, will apply to a CRUD REST API
+
