@@ -28,3 +28,12 @@ sudo apt-get update -y
 
 Install the workbench with command:
 sudo apt install mysql-workbench
+
+# CREATE SERVER SCRIPTS #
+01-create-user.sql
+	- create new MySQl user for app
+		-> user id: springstudent
+		-> password: springstudent
+
+02-student-tracker.sql
+	- create new database student
