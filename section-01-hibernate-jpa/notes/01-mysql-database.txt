@@ -37,3 +37,16 @@ sudo apt install mysql-workbench
 
 02-student-tracker.sql
 	- create new database student
+
+# SETTING UP MYSQL WORKBENCH #
+By default, since mysql-workbench-community is installed via snap, 
+the package is sandboxed as usual and by default not allowed access
+
+To allow access enter the command:
+sudo snap connect mysql-workbench-community:password-manager-service :password-manager-service
+
+Enter the next command in a terminal:
+sudo mysql -u root
+
+Enter command to alter password (where 'pass' is the password):
+ALTER USER 'root'@'localhost' IDENTIFIED WITH mysql_native_password BY 'pass';
