@@ -16,3 +16,38 @@ Add dependencies:
 - Focus on Hibernate / JPA
 - Later in the course, will apply to a CRUD REST API
 
+# JPA DEVELOPMENT PROCESS #
+To do list:
+1. annotate Java class
+2. develop Java code to perform database operations
+
+# JPA ASSUMPTIONS #
+- Hibernate is the default JPA implementation in Spring Boot
+- simply say "JPA" (since we know Hibernate is behind the scenes)
+
+# ENTITY CLASS # 
+Definition: Java class that is mapped to a database table
+- at minimum, must be annotated with @Entity
+- must have a public or protected no-argument constructor
+- can have other constructors
+
+# CONSTRUCTORS IN JAVA #
+- if no constructors are declared, Java will provide no-argument constructor for free
+- if constructors are declared with arguments, then do NOT get no-argument constructor for free
+	-> must explicitly declare a no-argument constructor
+
+# JAVA ANNOTATIONS DEVELOPMENT #
+1. map class to database table
+2. map fields to database columns
+	- @Column is optional
+	- if @Column not specified, same name as Java field
+		-> NOT recommended, refatoring field name will not match database columns
+	- if @Table not specified, same name as class
+		-> NOT recommended
+
+Primary Key:
+- uniquely identifies each row in a table
+- must be a unique value
+- cannot contain NULL values
+- can take advantage of AUTO_INCREMENT for unique ID values
+
