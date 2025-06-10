@@ -24,4 +24,5 @@ public class CruddemoApplication {
 		return runner -> {
 			System.out.println("Hello World");
 		};
+	}
 }
