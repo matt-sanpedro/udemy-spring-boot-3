@@ -1,0 +1,62 @@
+# STUDENT DATA ACCESS OBJECT #
+- interfaces with the database
+- common design pattern: Data Access Object (DAO)
+- BOTH JPA Entity Manager and Repository can be used in the same project
+	-> knowing both will help on future projects
+
+Methods to develop:
+- save(...)
+- findById(...)
+- findAll()
+- findByLastName(...)
+- update(...)
+- delete(...)
+- deleteAll()
+
+
+JPA Entity Manager
+- main component for saving / retrieving entities
+- needs a Data Source (defines database connection info)
+- entity manager and data source automatically created by Spring Boot framework
+	-> based on application.properties file (JDBC URL, user id, password, etc.)
+- can autowire / inject the JPA entity manager into our Student DAO
+USE CASE:
+- need for low-level control and flexibility (can create custom queries)
+- complex queries that require advanced features such as native SQL queries or stored procedure calls
+- custom requirements not easily handled by higher-levcel abstractions
+
+
+ARCHITECTURE DIAGRAM:
+Student DAO	<-->	Entity Manager	<-->	Data Source	<-->	Database
+
+
+JPA Repository
+- an interface that provides JPA database access with minimal coding
+- covered later in course, a variety of techniques is used for JPA
+USE CASE:
+- need for high-level of abstraction
+- provides commonly used CRUD operations out of the box (reduces code)
+- includes features like pagination, sorting
+- generate queries based on method names
+- can create custom queries using @Query annotation
+
+
+# DEVELOPMENT PROCESS #
+1. define DAO interface
+2. define DAO implementation
+	-> inject the entity manager
+3. update main app
+
+
+# SPRING ANNOTATIONS #
+- applied to DAO implementations
+- due to component scanning, Spring automatically registers the DAO implementation
+- Spring provides translation of any JDBC related exceptions
+
+@Transactional
+- this annotation automatically begins and ends the transaction for the JPA code
+- a use case would be to add this annotation to the save method
+
+@Repository
+- sub annotation of @Component
+
