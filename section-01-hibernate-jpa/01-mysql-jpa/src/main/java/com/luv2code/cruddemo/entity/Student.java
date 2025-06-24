@@ -32,14 +32,19 @@ public class Student {
 
     }
 
-    // define constructor with parameters (chose all but id, since it is auto-generated with defined strategy)
+    /*
+     * define getter/setter methods 
+     *      Auto-generate constructors in Visual Studio Code:
+     *      (right-click -> source action -> generate constructors)
+     *      do NOT include "id" field since @GeneratedValue
+     */
     public Student(String firstName, String lastName, String email) {
         this.firstName = firstName;
         this.lastName = lastName;
         this.email = email;
     }
 
-    // define getter/setter methods
+    // define getter/setter methods 
     public int getId() {
         return id;
     }

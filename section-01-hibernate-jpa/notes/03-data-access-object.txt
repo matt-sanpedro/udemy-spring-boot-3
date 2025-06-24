@@ -23,7 +23,7 @@ JPA Entity Manager
 USE CASE:
 - need for low-level control and flexibility (can create custom queries)
 - complex queries that require advanced features such as native SQL queries or stored procedure calls
-- custom requirements not easily handled by higher-levcel abstractions
+- custom requirements not easily handled by higher-level abstractions
 
 
 ARCHITECTURE DIAGRAM:
@@ -56,7 +56,10 @@ USE CASE:
 @Transactional
 - this annotation automatically begins and ends the transaction for the JPA code
 - a use case would be to add this annotation to the save method
+- handles transaction management
 
 @Repository
 - sub annotation of @Component
-
+- specialized for repositories
+- supports component scanning
+- translates JDBC exceptions

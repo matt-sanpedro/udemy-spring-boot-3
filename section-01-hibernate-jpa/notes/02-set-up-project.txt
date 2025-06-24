@@ -41,7 +41,7 @@ Definition: Java class that is mapped to a database table
 2. map fields to database columns
 	- @Column is optional
 	- if @Column not specified, same name as Java field
-		-> NOT recommended, refatoring field name will not match database columns
+		-> NOT recommended, refactoring field name will not match database columns
 	- if @Table not specified, same name as class
 		-> NOT recommended
 
@@ -51,3 +51,14 @@ Primary Key:
 - cannot contain NULL values
 - can take advantage of AUTO_INCREMENT for unique ID values
 
+# ID GENERATION STRATEGIES #
+AUTO: pick an appropriate strategy for the particular database
+IDENTITY: assign primary keys using database identity columns
+SEQUENCE: assign primary keys using a database sequence
+TABLE: assign primary keys using an underlying database table to ensure uniqueness
+UUID: assign primary keys using a globally unique identifier (UUID) to ensure uniqueness
+
+# CUSTOM GENERATION STRATEGY #
+create implementation:
+org.hibernate.id.IdentifierGenerator
+Override the method: public Serializable generate (...)
